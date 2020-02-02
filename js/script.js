@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    hideTabContent(1);
+    hideTabContent(1);//сховали всі блоки починаючи з 1 за індексом
 
     function showTabContent(b) {
         if (tabContent[b].classList.contains('hide')){
@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function () {
         let target = event.target;
         if (target && target.classList.contains('info-header-tab')){
             for (let i = 0; i < tab.length; i++){
-                if (target == tab[i]){
+                if (target === tab[i]){
                     hideTabContent(0);
                     showTabContent(i);
                     break;
