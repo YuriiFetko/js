@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function () {
         tabContent = document.querySelectorAll('.info-tabcontent');
 
     function hideTabContent(a) {
-        for (let i = a; i < tabContent.length; i++){
+        for (let i = a; i < tabContent.length; i++) {
             tabContent[i].classList.remove('show');
             tabContent[i].classList.add('hide');
         }
@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function () {
     hideTabContent(1);//сховали всі блоки починаючи з 1 за індексом
 
     function showTabContent(b) {
-        if (tabContent[b].classList.contains('hide')){
+        if (tabContent[b].classList.contains('hide')) {
             tabContent[b].classList.remove('hide');
             tabContent[b].classList.add('show');
         }
@@ -22,9 +22,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
     info.addEventListener('click', function (event) {
         let target = event.target;
-        if (target && target.classList.contains('info-header-tab')){
-            for (let i = 0; i < tab.length; i++){
-                if (target === tab[i]){
+        if (target && target.classList.contains('info-header-tab')) {
+            for (let i = 0; i < tab.length; i++) {
+                if (target === tab[i]) {
                     hideTabContent(0);
                     showTabContent(i);
                     break;
@@ -35,22 +35,22 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //timer
 
-    let deadline = '2020-2-9';
+    let deadline = '2020-3-9';
 
     function getTimeRemaining(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()),
-        seconds = Math.floor((t / 1000) % 60),
-        minutes = Math.floor((t / 1000 / 60) % 60),
-        hours = Math.floor((t / (1000 * 60 * 60)));
+            seconds = Math.floor((t / 1000) % 60),
+            minutes = Math.floor((t / 1000 / 60) % 60),
+            hours = Math.floor((t / (1000 * 60 * 60)));
 
         return {
-            "total" : t,
-            "hours" : hours,
-            "minutes" : minutes,
-            "seconds" : seconds
+            "total": t,
+            "hours": hours,
+            "minutes": minutes,
+            "seconds": seconds
         };
     }
-    
+
     function setClock(id, endtime) {
         let timer = document.getElementById(id),
             hours = timer.querySelector('.hours'),
@@ -72,19 +72,19 @@ window.addEventListener('DOMContentLoaded', function () {
                 lenMinutes = minutesForNull.split(""),
                 lenSeconds = secondsForNull.split("");
 
-            if (lenHours.length === 1){
-                hours.textContent = "0" + t.hours ;
+            if (lenHours.length === 1) {
+                hours.textContent = "0" + t.hours;
             }
 
-            if (lenMinutes.length === 1){
+            if (lenMinutes.length === 1) {
                 minutes.textContent = "0" + t.minutes;
             }
 
-            if (lenSeconds.length === 1){
+            if (lenSeconds.length === 1) {
                 seconds.textContent = "0" + t.seconds;
             }
 
-            if (t.total <= 0){
+            if (t.total <= 0) {
                 clearInterval(timeInterval);
                 hours.textContent = '00';
                 minutes.textContent = '00';
@@ -94,4 +94,33 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
     setClock('timer', deadline);
+
+
+//modal
+
+    let more = document.querySelector(".more"),
+        overlay = document.querySelector(".overlay"),
+        close = document.querySelector(".popup-close"),
+        descTab = document.querySelectorAll(".description-btn");
+
+
+    descTab.forEach(element => element.addEventListener("click", function () {
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }));
+
+
+    more.addEventListener('click', function () {
+        overlay.style.display = 'block';
+        this.classList.add("more-splash");
+        document.body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function () {
+        overlay.style.display = 'none';
+        more.classList.remove("more-splash");
+        document.body.style.overflow = '';
+    });
+
+
 });
