@@ -130,12 +130,13 @@ window.addEventListener("DOMContentLoaded", function () {
 
   let modalForm = document.querySelector(".main-form"),
     contactFrom = document.querySelector("#form"),
-    input = form.getElementsByTagName("input"),
     statusMessage = document.createElement("div");
 
   statusMessage.classList.add("status");
 
   function sendForm(typeFrom) {
+    let input = typeFrom.getElementsByTagName("input");
+
     typeFrom.addEventListener("submit", function (event) {
       event.preventDefault();
       typeFrom.appendChild(statusMessage);
