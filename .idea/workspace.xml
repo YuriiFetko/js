@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b51dd799-d1f3-4c90-be9c-48242dc0cba3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +46,30 @@
       <workItem from="1580662193473" duration="4949000" />
       <workItem from="1581190048912" duration="4965000" />
       <workItem from="1581455858275" duration="48000" />
-      <workItem from="1583065978292" duration="4693000" />
+      <workItem from="1583065978292" duration="8905000" />
+      <workItem from="1583670099639" duration="2075000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="488" y="120" key="#com.intellij.ide.util.MemberChooser" timestamp="1583075598595">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="488" y="120" key="#com.intellij.ide.util.MemberChooser/0.40.1366.728@0.40.1366.728" timestamp="1583075598595" />
+    <state x="287" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583075542584">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="287" y="40" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1366.728@0.40.1366.728" timestamp="1583075542584" />
+    <state x="339" y="182" key="run.anything.popup" timestamp="1583075148097">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="339" y="182" key="run.anything.popup/0.40.1366.728@0.40.1366.728" timestamp="1583075148097" />
+    <state x="346" y="89" key="search.everywhere.popup" timestamp="1583075155017">
+      <screen x="0" y="40" width="1366" height="728" />
+    </state>
+    <state x="346" y="89" key="search.everywhere.popup/0.40.1366.728@0.40.1366.728" timestamp="1583075155017" />
   </component>
 </project>
